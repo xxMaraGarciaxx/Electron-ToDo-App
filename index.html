@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      background-color: grey;
+    }
+
+    h1 {
+      font-family: fantasy;
+      font-size: 45px;
+      color: #FFE4E1;
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .text {
+      width: 600px;
+      background-color: grey;
+      border-width: 1px;
+      border-color: lightgrey;
+      border-style: dashed;
+    }
+
+    #checkbox {
+      transform: scale(1.6);
+      background-color: lightgrey;
+    }
+
+    #checkbox:active {
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My personal
+    <br>To Do App</h1>
+  <ul>
+    <li>
+      <input type="checkbox" id="checkbox" onclick="checked()"></input>
+      <input type="text" id="input" class="text" onclick="newLine()"></input>
+    </li>
+  </ul>
+</body>
+
+</html>
