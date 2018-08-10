@@ -1,0 +1,103 @@
+:root {
+  --checkbox-size: 1.5rem;
+  --input-height: 2rem;
+  --t: 0.2s;
+  --c1: grey;
+  --c2: #aaa;
+  --v1: #d3d3d3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 1rem;
+  display: grid;
+  justify-content: flex-start;
+}
+
+h1 {
+  align-self: center;
+  font-family: 'Mouse Memoirs', sans-serif;
+  color: lightcoral;
+}
+
+.item {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.item.done {
+  transition: all var(--t);
+  filter: blur(2px);
+}
+
+.checkbox {
+  overflow: visible;
+  position: relative;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  transition: all .2s;
+}
+
+.checkbox__wrapper:hover>.checkbox {
+  transform: scale(.94);
+  cursor: pointer;
+}
+
+.checkbox__circle {
+  position: absolute;
+  width: var(--checkbox-size);
+  height: var(--checkbox-size);
+  border-radius: 100%;
+  transition: all var(--t);
+}
+
+.checkbox__circle--outer {
+  border: 4px solid var(--c2);
+  filter: blur((var(--checkbox-size) / 6));
+}
+
+.checkbox__circle--inner {
+  transition: all 3s;
+  opacity: 0;
+  border: 4px solid var(--c2);
+  background-color: var(--c2);
+  /* transform: scale(0.2) translateX(-var(--checkbox-size) * 8); */
+  transform: scale(0.2) translateX(calc(-1 * var(--checkbox-size) * 5));
+  filter: blur(2px);
+}
+
+.item:not(.done) .checkbox__circle--outer {
+  border-color: var(--c1);
+  transform: scale(1);
+  filter: blur(0px);
+}
+
+.item:not(.done) .checkbox__circle--inner {
+  opacity: 1;
+  border-color: var(--c1);
+  background-color: var(--c1);
+  transform: scale(0.5) translateX(0);
+  filter: blur((-var(--checkbox-size) / 8));
+}
+
+.input__wrapper {
+  padding: 0 1rem;
+}
+
+input {
+  height: var(--input-height);
+  font-size: 1.6rem;
+  width: 100%;
+}
+
+#delete {
+  margin-top: 10px;
+  width: 8rem
+}

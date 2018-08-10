@@ -1,57 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      max-width: 980px;
-      margin: 0 auto;
-      background-color: grey;
-    }
-
-    h1 {
-      font-family: fantasy;
-      font-size: 45px;
-      color: #FFE4E1;
-      text-decoration: underline;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .text {
-      width: 600px;
-      background-color: grey;
-      border-width: 1px;
-      border-color: lightgrey;
-      border-style: dashed;
-    }
-
-    #checkbox {
-      transform: scale(1.6);
-      background-color: lightgrey;
-    }
-
-    #checkbox:active {
-      background-color: pink;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Kirang+Haerang|Mouse+Memoirs" rel="stylesheet">
 </head>
 
 <body>
-  <h1>My personal
-    <br>To Do App</h1>
-  <ul>
-    <li>
-      <input type="checkbox" id="checkbox" onclick="checked()"></input>
-      <input type="text" id="input" class="text" onclick="newLine()"></input>
-    </li>
-  </ul>
+  <h1>My Memory Assistant 📝</h1>
+  <ul id="list"></ul>
+  <button id="delete">Delete ❌</button>
+
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
 </body>
 
 </html>
