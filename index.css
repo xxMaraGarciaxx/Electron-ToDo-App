@@ -17,6 +17,7 @@ body {
   margin: 1rem;
   display: grid;
   justify-content: flex-start;
+  background-color: red;
 }
 
 h1 {
