@@ -150,28 +150,19 @@ input {
 
 /*------------- Delete Button -------------*/
 
-.box{
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-
-.box-left {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  background-color: #e74c3c;
-  margin: auto;
-  cursor: pointer;
+.delete{
+  margin-left: 40vw;
+  margin-top: 15px;
+  padding-bottom: 2px;
+  background-color: red;
   border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-family: 'Ubuntu',sans-serif;
+  font-size: 20px;
+  border-color: red;
 
-}
-
-.fa-times {
-  margin-top: 7px;
-  margin-left: 8px;
-  font-size: 20px !important;
-  color: #fff;
 }
 
  /*------------- Priority Select -------------*/
