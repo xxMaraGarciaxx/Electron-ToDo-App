@@ -1,8 +1,11 @@
+
+/*------------- General -------------*/
+
 :root {
-  --checkbox-size: 1.5rem;
+  --checkbox-size: 2rem;
   --input-height: 2rem;
   --t: 0.2s;
-  --c1: grey;
+  --c1: white;
   --c2: #aaa;
   --v1: #d3d3d3;
 }
@@ -13,29 +16,70 @@
   padding: 0;
 }
 
-body {
-  margin: 1rem;
-  display: grid;
-  justify-content: flex-start;
+body{
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+
 }
 
-h1 {
-  align-self: center;
-  font-family: 'Mouse Memoirs', sans-serif;
-  color: lightcoral;
-}
+/*------------- Header SK -------------*/
 
-.item {
+header{
+  margin-top: 40px;
   display: flex;
-  list-style-type: none;
-  align-items: center;
-  margin-top: 1rem;
+  justify-self: center;
+  flex-direction: column-reverse;
+  width: 100%;
 }
 
-.item.done {
-  transition: all var(--t);
-  filter: blur(2px);
+h1{
+  align-self: flex-end;
+  font-size: 20px;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight: regular;
 }
+
+h2{
+  align-self: flex-start;
+  font-size: 40px;
+  font-family: 'Ubuntu',sans-serif;
+  font-weight: regular;
+}
+
+h1:before{
+  content: "<";
+  color: red;
+  font-size: 20px;
+}
+
+h1:after{
+  content: "/>";
+  color: red;
+  font-size: 20px;
+}
+
+h2:before{
+  content: "<";
+  color: red;
+  font-size: 40px;
+}
+
+h2:after{
+  content: "/>";
+  color: red;
+  font-size: 40px;
+}
+
+hr {
+  color: black;
+  height: 1px;
+  border: solid #000000 0.5px;
+}
+
+/*------------- Done Checkbox -------------*/
 
 .checkbox {
   overflow: visible;
@@ -54,41 +98,48 @@ h1 {
   position: absolute;
   width: var(--checkbox-size);
   height: var(--checkbox-size);
-  border-radius: 100%;
   transition: all var(--t);
 }
 
 .checkbox__circle--outer {
-  border: 4px solid var(--c2);
   filter: blur((var(--checkbox-size) / 6));
 }
 
 .checkbox__circle--inner {
   transition: all 3s;
   opacity: 0;
-  border: 4px solid var(--c2);
-  background-color: var(--c2);
-  /* transform: scale(0.2) translateX(-var(--checkbox-size) * 8); */
-  transform: scale(0.2) translateX(calc(-1 * var(--checkbox-size) * 5));
-  filter: blur(2px);
+  font-size: 1.8rem;
+  font-family: 'Ubuntu',sans-serif;
+  color: red;
 }
 
 .item:not(.done) .checkbox__circle--outer {
-  border-color: var(--c1);
   transform: scale(1);
   filter: blur(0px);
 }
 
 .item:not(.done) .checkbox__circle--inner {
   opacity: 1;
-  border-color: var(--c1);
   background-color: var(--c1);
-  transform: scale(0.5) translateX(0);
   filter: blur((-var(--checkbox-size) / 8));
 }
 
-.input__wrapper {
-  padding: 0 1rem;
+/*------------- Input ToDo -------------*/
+
+.input__wrapper{
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.item.done {
+  transition: all var(--t);
+  filter: blur(2px);
 }
 
 input {
@@ -97,7 +148,50 @@ input {
   width: 100%;
 }
 
-#delete {
-  margin-top: 10px;
-  width: 8rem
+/*------------- Delete Button -------------*/
+
+.box{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.box-left {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: #e74c3c;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+
+.fa-times {
+  margin-top: 7px;
+  margin-left: 8px;
+  font-size: 20px !important;
+  color: #fff;
+}
+
+ /*------------- Priority Select -------------*/
+.semi-square {
+   border-radius: 3px;
+}
+
+.styled-select {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 90%;
+   height: 1.9rem;
+   overflow: hidden;
+   width: 50px;
+}
+
+select{
+    -webkit-appearance: none;
+    margin-left: 2px;
+    appearance: none;
+    padding: 3px;
+    font-weight: bolder;
+    font-size: 18px;
+    color: red;
 }

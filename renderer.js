@@ -46,12 +46,20 @@ function appendTodo(todo) {
       <div class="checkbox__wrapper">
         <div class="checkbox">
           <div class="checkbox__circle checkbox__circle--outer"></div>
-          <div class="checkbox__circle checkbox__circle--inner"></div>
+          <div class="checkbox__circle checkbox__circle--inner">#</div>
         </div>
       </div>
       <div class="input__wrapper">
         <input type="text" value="${todo.text}">
       </div>
+     <div class="priority">
+       <select name="priority" class="semi-square styled-select">
+          <option value="none"></option>
+          <option value="high">!!!</option>
+          <option value="medium">&nbsp;!!</option>
+          <option value="low">&nbsp;!&nbsp;</option>
+        </select>
+     </div>
     </li>`
   list.insertAdjacentHTML('beforeend', todoHtml)
 }

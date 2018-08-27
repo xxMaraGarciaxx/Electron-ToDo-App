@@ -1,12 +1,16 @@
 {
-  "name": "electron-quick-start",
+  "name": "to-do-app",
   "version": "1.0.0",
+  "author": "Mara Garcia <m.garcia@strich-komma.de>",
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "ship": "npm run ship-linux && npm run ship-mac-and-windows",
+    "ship-linux": "build --linux -p always",
+    "ship-mac-and-windows": "build --win --mac -p always"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/xxMaraGarciaxx/Electron-ToDo-App",
   "keywords": [
     "Electron",
     "quick",
@@ -14,13 +18,14 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0"
+    "electron": "^2.0.0",
+    "electron-builder": "^20.27.1"
   },
   "dependencies": {
     "electron-json-storage": "^4.1.1",
-    "electron-reload": "^1.2.5"
+    "electron-reload": "^1.2.5",
+    "electron-updater": "^3.1.1"
   }
 }

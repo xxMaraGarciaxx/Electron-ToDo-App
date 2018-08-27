@@ -11,14 +11,20 @@
 </head>
 
 <body>
-  <h1>My Memory Assistant 📝</h1>
-  <ul id="list"></ul>
-  <button id="delete">Delete ❌</button>
+  <header>
+    <h1>My Memory Assistent</h1>
+    <hr>
+    <h2>strich-komma</h2>
+  </header>
+  <ul id="list">
 
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+  </ul>
+  <div type='button' name='delete' class='box' id="delete">
+    <div class='box-left'>
+      <i class='but-icon fa fa-lg fa-times'></i>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
 </body>
 
 </html>
