@@ -151,7 +151,6 @@ input {
 /*------------- Delete Button -------------*/
 
 .delete{
-  margin-left: 80vw;
   margin-top: 15px;
   padding-bottom: 2px;
   background-color: red;
