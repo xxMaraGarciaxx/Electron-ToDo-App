@@ -13,7 +13,7 @@
     "build-mas": "electron-packager . electron-app --platform=mas --icon Icons/unicorn.icns --overwrite",
     "build-linux": "electron-packager . electron-app --platform=linux --icon Icons/unicorn.png --overwrite",
     "build-win32": "electron-packager . electron-app --platform=win32 --icon Icons/unicorn.ico --overwrite",
-    "build": "npm run build-darwin && npm run build-mas && npm run build-linux && npm run build-win32"
+    "build": "electron-packager . ToDoApp"
   },
   "repository": "https://github.com/xxMaraGarciaxx/Electron-ToDo-App",
   "keywords": [
@@ -25,7 +25,7 @@
   ],
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^2.0.0",
+    "electron": "^2.0.8",
     "electron-builder": "^20.27.1",
     "electron-packager": "^12.1.1",
     "spectron": "^3.8.0"
