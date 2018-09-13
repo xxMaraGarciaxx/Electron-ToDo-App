@@ -7,10 +7,7 @@ const storage = require('electron-json-storage');
 const list = document.getElementById('list')
 
 // Id Generator for the todos
-const nextId = (() => {
-  let id = 0
-  return () => id++
-})()
+const nextId = Math.random
 
 let todos
 
