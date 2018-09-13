@@ -1,6 +1,6 @@
 {
   "name": "to-do-app",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "author": "Mara Garcia <m.garcia@strich-komma.de>",
   "description": "A minimal Electron application",
   "main": "main.js",
